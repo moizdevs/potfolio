@@ -9,9 +9,9 @@ const MyWork = () => {
           <h1 className="flex py-5 px-5 mx-auto font-bold text-4xl text-center text-white">
             My Works
           </h1>
-          <div className="horizontal-scroll w-5/6 m-auto flex overflow-x-scroll pb-10 hide-scroll-bar">
+          <div className="work-scroll horizontal-scroll w-5/6 m-auto flex overflow-x-scroll pb-10 hide-scroll-bar">
             <div className="flex flex-nowrap lg:ml-7 md:ml-20 gap-x-5">
-              <div className="w-80 bg-[#0f0b1b] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+              <div className="w-80 bg-[#120f19] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
                 <a href="#">
                   <Image
                     className="rounded-t-lg"
@@ -51,7 +51,7 @@ const MyWork = () => {
                 </div>
               </div>
 
-              <div className="w-80 bg-[#0f0b1b] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+              <div className="w-80 bg-[#120f19] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
                 <a href="#">
                   <Image
                     className="rounded-t-lg"
@@ -91,7 +91,7 @@ const MyWork = () => {
                 </div>
               </div>
 
-              <div className="w-80 bg-[#0f0b1b] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+              <div className="w-80 bg-[#120f19] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
                 <a href="#">
                   <Image
                     className="rounded-t-lg"
@@ -131,7 +131,7 @@ const MyWork = () => {
                 </div>
               </div>
 
-              <div className="w-80 bg-[#0f0b1b] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+              <div className="w-80 bg-[#120f19] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
                 <a href="#">
                   <Image
                     className="rounded-t-lg"
@@ -171,7 +171,7 @@ const MyWork = () => {
                 </div>
               </div>
 
-              <div className="w-80 bg-[#0f0b1b] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+              <div className="w-80 bg-[#120f19] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
                 <a href="#">
                   <Image
                     className="rounded-t-lg"
@@ -211,7 +211,7 @@ const MyWork = () => {
                 </div>
               </div>
 
-              <div className="w-80 bg-[#0f0b1b] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+              <div className="w-80 bg-[#120f19] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
                 <a href="#">
                   <Image
                     className="rounded-t-lg"
@@ -251,7 +251,7 @@ const MyWork = () => {
                 </div>
               </div>
 
-              <div className="w-80 bg-[#0f0b1b] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+              <div className="w-80 bg-[#120f19] rounded-lg shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out">
                 <a href="#">
                   <Image
                     className="rounded-t-lg"
