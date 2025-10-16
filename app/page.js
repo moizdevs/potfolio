@@ -52,19 +52,19 @@ export default function Home() {
           </button>
           <div className="icons mt-3">
             <a href="https://www.linkedin.com/in/moiz-rehman-6674a5203/">
-              <i className="hover:text-[#0de6e6] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-linkedin-in"></i>
+              <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-linkedin-in"></i>
             </a>
             <a href="https://www.facebook.com/moiz.rehman.37604">
-              <i className="hover:text-[#0de6e6] text-4xl max-[915px]:text-2xl pr-3 text-white fa-brands fa-facebook"></i>
+              <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fa-brands fa-facebook"></i>
             </a>
             <a href="">
-              <i className="hover:text-[#0de6e6] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-twitter"></i>
+              <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-twitter"></i>
             </a>
             <a href="https://wa.me/923157378892">
-              <i className="hover:text-[#0de6e6] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-whatsapp"></i>
+              <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-whatsapp"></i>
             </a>
             <a href="https://www.instagram.com/moizur36/">
-              <i className="hover:text-[#0de6e6] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-instagram"></i>
+              <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-instagram"></i>
             </a>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
               alt="Hero Image"
               width={280}
               height={280}
-              className=" object-cover rounded-full border-4 border-gradient shadow-[0_0_10px_10px_#343D3F] hover:shadow-[0_0_20px_rgba(0,0,0,0.7)] transition-shadow duration-300 ease-in-out"
+              className=" object-cover rounded-full border-4 border-gradient shadow-[0_0_20px_rgba(0,0,0,0.7)] hover:shadow-[0_0_10px_10px_#343D3F] transition-shadow duration-300 ease-in-out"
             />
           </div>
         </div>
