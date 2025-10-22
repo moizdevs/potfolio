@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const notfound = () => {
   return (
@@ -28,12 +29,12 @@ const notfound = () => {
           The page you’re looking for might have been removed or is temporarily
           unavailable.
         </p>
-        <a
+        <Link
           href="/"
           className="inline-block bg-green-500 text-white px-6 py-3 rounded-lg text-lg font-medium shadow-md hover:bg-green-600 transition-all duration-300"
         >
           Go Back Home
-        </a>
+        </Link>
       </div>
 
       {/* Floating Glow Effect */}
