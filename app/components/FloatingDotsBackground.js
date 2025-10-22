@@ -7,7 +7,9 @@ const FloatingDotsBackground = () => {
   const [viewportHeight, setViewportHeight] = useState(0);
 
   useEffect(() => {
-    // Handle responsive height
+    const mountNode = mountRef.current; // ✅ Capture ref value
+
+    // === Handle Responsive Height ===
     const updateHeight = () => setViewportHeight(window.innerHeight);
     updateHeight();
     window.addEventListener("resize", updateHeight);
@@ -25,7 +27,7 @@ const FloatingDotsBackground = () => {
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current.appendChild(renderer.domElement);
+    mountNode.appendChild(renderer.domElement);
 
     // === Galaxy Parameters ===
     const particleCount = 15000;
@@ -91,7 +93,7 @@ const FloatingDotsBackground = () => {
       alphaTest: 0.01,
     });
 
-    // To avoid rectangles, use a circular texture
+    // Circular texture
     const circleTexture = new THREE.TextureLoader().load(
       "https://threejs.org/examples/textures/sprites/circle.png"
     );
@@ -101,26 +103,27 @@ const FloatingDotsBackground = () => {
     scene.add(points);
 
     // === Animation ===
-let time = 0;
-const animate = () => {
-  requestAnimationFrame(animate);
+    let time = 0;
+    let isMounted = true;
 
-  // Slowly rotate
-  points.rotation.y += 0.0003; // reduce speed here (lower = slower)
+    const animate = () => {
+      if (!isMounted) return; // ✅ stop when unmounted
+      requestAnimationFrame(animate);
 
-  // Move all points gently to the right (floating effect)
-  time += 0.001;
-  const positions = geometry.attributes.position.array;
-  for (let i = 0; i < positions.length; i += 3) {
-    positions[i] += Math.sin(time + i * 0.0001) * 0.0001; // x drifting
-    positions[i + 1] += Math.cos(time + i * 0.00015) * 0.00005; // gentle y movement
-  }
-  geometry.attributes.position.needsUpdate = true;
+      points.rotation.y += 0.0003;
+      time += 0.001;
 
-  renderer.render(scene, camera);
-};
-animate();
+      const posArray = geometry.attributes.position.array;
+      for (let i = 0; i < posArray.length; i += 3) {
+        posArray[i] += Math.sin(time + i * 0.0001) * 0.0001;
+        posArray[i + 1] += Math.cos(time + i * 0.00015) * 0.00005;
+      }
+      geometry.attributes.position.needsUpdate = true;
 
+      renderer.render(scene, camera);
+    };
+
+    animate();
 
     // === Handle Resize ===
     const handleResize = () => {
@@ -132,9 +135,14 @@ animate();
 
     // === Cleanup ===
     return () => {
+      isMounted = false;
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("resize", updateHeight);
-      mountRef.current.removeChild(renderer.domElement);
+
+      if (mountNode && renderer.domElement.parentNode === mountNode) {
+        mountNode.removeChild(renderer.domElement);
+      }
+
       geometry.dispose();
       material.dispose();
       renderer.dispose();
@@ -160,4 +168,3 @@ animate();
 };
 
 export default FloatingDotsBackground;
-

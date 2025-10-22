@@ -2,6 +2,7 @@
 import Image from "next/image";
 import MyWork from "./components/MyWork";
 import Footer from "./components/Footer";
+import Link from "next/link";
 import AboutSection from "./components/AboutSection";
 import FloatingDotsBackground from "./components/FloatingDotsBackground";
 import { TailSpin } from "react-loader-spinner";
@@ -51,21 +52,21 @@ export default function Home() {
             Download CV
           </button>
           <div className="icons mt-3">
-            <a href="https://www.linkedin.com/in/moiz-rehman-6674a5203/">
+            <Link href="https://www.linkedin.com/in/moiz-rehman-6674a5203/">
               <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.facebook.com/moiz.rehman.37604">
+            </Link>
+            <Link href="https://www.facebook.com/moiz.rehman.37604">
               <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fa-brands fa-facebook"></i>
-            </a>
-            <a href="">
+            </Link>
+            <Link href="">
               <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-twitter"></i>
-            </a>
-            <a href="https://wa.me/923157378892">
+            </Link>
+            <Link href="https://wa.me/923157378892">
               <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-whatsapp"></i>
-            </a>
-            <a href="https://www.instagram.com/moizur36/">
+            </Link>
+            <Link href="https://www.instagram.com/moizur36/">
               <i className="hover:text-[#422E71] text-4xl max-[915px]:text-2xl pr-3 text-white fab fa-instagram"></i>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="w-full flex items-center justify-center">
